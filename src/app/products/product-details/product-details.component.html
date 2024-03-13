@@ -1,0 +1,19 @@
+<div class="back">
+    <a routerLink="/products-list" class="back-icon">
+        <img src="../../../../assets/back.png" alt="Back Icon">
+    </a>
+</div>
+<div *ngIf="product" class="product-details-container">
+    <div class="product-image">
+        <img src="../../../assets/{{product.image}}" alt="{{ product.name }}">
+    </div>
+    <div class="product-info">
+        <h1 class="product-name">{{ product.name }}</h1>
+        <div class="product-category">Category: {{ product.category }}</div>
+        <div class="product-price">Price: {{ product.price | currency: 'INR' }}</div>
+        <div class="product-quantity">Available Quantity: {{ product.quantity }}</div>
+        <div class="product-brand">Brand: {{ product.brand }}</div>
+        <div class="product-rating">Rating: {{ product.rating }}</div>
+        <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
