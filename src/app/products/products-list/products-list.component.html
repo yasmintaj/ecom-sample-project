@@ -1,20 +1,32 @@
 <div class="product-list">
     <div *ngFor="let product of products" class="product-link">
         <div class="product-card">
-            <img src="../../../assets/{{product.image}}" alt=" {{ product.name }}"
-                (click)="navigateToProductDetails($event, product.id)" class="product-image">
+            <img src="{{product.imageUrl}}" alt=" {{ product.name }}"
+                (click)="navigateToProductDetails($event, product)" class="product-image">
             <div class="product-details">
-                <span class="category">{{ product.category }}</span>
-                <h2 class="name">{{ product.name }}</h2>
-                <div class="quantity">qty:{{ product.quantity }}</div>
-                <div class="price">{{ product.price | currency: 'INR'}}</div>
-                <button *ngIf="productCount[product.id] === undefined || productCount[product.id] === 0"
-                    (click)="addToCart(product)" class="add-button">Add</button>
-                <div *ngIf="productCount[product.id] !== undefined && productCount[product.id] !== 0"
-                    class="cart-counter">
-                    <button (click)="decrementCount(product)">-</button>
-                    <span>{{ productCount[product.id] }}</span>
-                    <button (click)="incrementCount(product)">+</button>
+                <span class="category">{{ product.brandName }}</span>
+                <h2 class="name">{{ product.productName }}</h2>
+                <div class="quantity">
+                    <mat-form-field>
+                        <mat-label>Quantity</mat-label>
+                        <mat-select [(ngModel)]="selectedQuantities[product.id]"
+                            (selectionChange)="onSelectionChange($event, product)">
+                            @for (qty of product.quantity; track qty) {
+                            <mat-option [value]="qty">{{qty}} {{product.unitType === 'kg' ? 'Kg' : 'L'}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="price">{{ product.price | currency: 'INR' }}</div>
+                <div class="add">
+                    <button *ngIf="productCount[product.id] === undefined || productCount[product.id] === 0"
+                        (click)="addToCart(product)" class="add-button">Add</button>
+                    <div *ngIf="productCount[product.id] !== undefined && productCount[product.id] !== 0"
+                        class="cart-counter">
+                        <button (click)="decrementCount(product)">-</button>
+                        <span>{{ productCount[product.id] }}</span>
+                        <button (click)="incrementCount(product)">+</button>
+                    </div>
                 </div>
             </div>
         </div>

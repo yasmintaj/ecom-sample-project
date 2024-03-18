@@ -1,154 +1,203 @@
 {
-    "products": [
+    "Products": [
         {
-            "id": "1",
-            "name": "Basmati Rice",
-            "category": "Grains",
-            "price": 10.99,
-            "quantity": 100,
-            "brand": "Tilda",
-            "image": "rice.jpeg",
-            "rating": 4.5
+            "ProductID": 1,
+            "Name": "Whole Wheat Flour",
+            "Description": "Premium quality whole wheat flour",
+            "CategoryID": 1,
+            "BrandID": 1,
+            "UnitType": "kg",
+            "PricePerUnit": 200,
+            "Quantities": [
+                1,
+                5,
+                10
+            ],
+            "rating": "3.9",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/126903_10-aashirvaad-atta-whole-wheat.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "2",
-            "name": "Chickpeas (Chana)",
-            "category": "Legumes",
-            "price": 2.99,
-            "quantity": 50,
-            "brand": "Rajma",
-            "image": "chickpeas.jpeg",
-            "rating": 4.0
+            "ProductID": 2,
+            "Name": "Multigrain Flour",
+            "Description": "Healthy multigrain flour blend",
+            "CategoryID": 1,
+            "BrandID": 2,
+            "UnitType": "kg",
+            "PricePerUnit": 230.89,
+            "Quantities": [
+                5,
+                10
+            ],
+            "rating": "4.1",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/1224544_2-pillsbury-attagodihittu-multigrain.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "3",
-            "name": "Turmeric Powder",
-            "category": "Spices",
-            "price": 3.49,
-            "quantity": 75,
-            "brand": "MDH",
-            "image": "turmeric.jpeg",
-            "rating": 4.2
+            "ProductID": 3,
+            "Name": "Chakki Fresh Atta",
+            "Description": "Organic Chakki Fresh Atta",
+            "CategoryID": 1,
+            "BrandID": 3,
+            "UnitType": "kg",
+            "PricePerUnit": 189,
+            "Quantities": [
+                5
+            ],
+            "rating": "4.2",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40017628_1-24-mantra-organic-whole-wheat-flour.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "4",
-            "name": "Ghee",
-            "category": "Dairy",
-            "price": 7.99,
-            "quantity": 30,
-            "brand": "Amul",
-            "image": "ghee.jpg",
-            "rating": 4.8
+            "ProductID": 4,
+            "Name": "Superior-Mp-Sharbati-Atta/Godihittu - Fortified",
+            "Description": "Premium quality whole wheat flour",
+            "CategoryID": 1,
+            "BrandID": 2,
+            "UnitType": "kg",
+            "PricePerUnit": 145,
+            "Quantities": [
+                1,
+                2,
+                5
+            ],
+            "rating": "3.8",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/1224544_2-pillsbury-attagodihittu-multigrain.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "5",
-            "name": "Masoor Dal",
-            "category": "Legumes",
-            "price": 4.25,
-            "quantity": 40,
-            "brand": "Laxmi",
-            "image": "black_lent.jpg",
-            "rating": 4.3
+            "ProductID": 5,
+            "Name": "Sugar Release Control Atta/Godihittu",
+            "Description": "Healthy multigrain flour blend",
+            "CategoryID": 1,
+            "BrandID": 3,
+            "UnitType": "kg",
+            "PricePerUnit": 170,
+            "Quantities": [
+                5,
+                10,
+                20
+            ],
+            "rating": "3.9",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40240040_1-24-mantra-organic-7-grain-methi-atta-blended-flour-with-ragi-jowar-barley-soybean-for-healthy-chapatis.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "6",
-            "name": "Cumin Seeds (Jeera)",
-            "category": "Spices",
-            "price": 2.79,
-            "quantity": 60,
-            "brand": "Eastern",
-            "image": "cumin.jpg",
-            "rating": 4.1
+            "ProductID": 6,
+            "Name": "Organic Multigrain Atta/Flour",
+            "Description": "Organic Multigrain Atta/Flour",
+            "CategoryID": 1,
+            "BrandID": 1,
+            "UnitType": "kg",
+            "PricePerUnit": 220.50,
+            "Quantities": [
+                2,
+                50
+            ],
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40236231_3-aashirvaad-select-sharbati-atta-100-mp-whole-wheat-rotis-stay-softer-for-longer.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "7",
-            "name": "Green Tea",
-            "category": "Beverages",
-            "price": 4.99,
-            "quantity": 20,
-            "brand": "Taj Mahal",
-            "image": "green_tea.jpg",
-            "rating": 4.7
+            "ProductID": 7,
+            "Name": "Sunflower Oil",
+            "Description": "Pure sunflower oil for cooking",
+            "CategoryID": 2,
+            "BrandID": 2,
+            "UnitType": "liter",
+            "PricePerUnit": 222,
+            "Quantities": [
+                2,
+                4
+            ],
+            "rating": "4.9",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40023113_2-borges-borgefrit-high-mufa-oleic-sunflower-oil.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "8",
-            "name": "Alphonso Mango Pulp",
-            "category": "Canned Foods",
-            "price": 3.99,
-            "quantity": 25,
-            "brand": "Kesar",
-            "image": "mango.jpeg",
-            "rating": 4.4
+            "ProductID": 8,
+            "Name": "Olive Oil",
+            "Description": "Extra virgin olive oil",
+            "CategoryID": 2,
+            "BrandID": 1,
+            "UnitType": "liter",
+            "PricePerUnit": 199,
+            "Quantities": [
+                2.5,
+                5
+            ],
+            "rating": "4.0",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/1228371_1-fortune-sun-lite-refined-sunflower-oil.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "9",
-            "name": "Whole Wheat Flour (Atta)",
-            "category": "Flours",
-            "price": 4.49,
-            "quantity": 35,
-            "brand": "Ashirwad",
-            "image": "wheat.jpg",
-            "rating": 4.6
+            "ProductID": 9,
+            "Name": "Mustard Oil",
+            "Description": "Pure Mustard oil",
+            "CategoryID": 2,
+            "BrandID": 1,
+            "UnitType": "liter",
+            "PricePerUnit": 220,
+            "Quantities": [
+                1
+            ],
+            "rating": "4.2",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40310075_2-fortune-premium-kachi-ghani-pure-mustard-oil.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "10",
-            "name": "Papadums",
-            "category": "Snacks",
-            "price": 1.99,
-            "quantity": 70,
-            "brand": "Lijjat",
-            "image": "papadums.jpg",
-            "rating": 4.2
+            "ProductID": 10,
+            "Name": "Coconut Oil",
+            "Description": "Organic coconut oil",
+            "CategoryID": 2,
+            "BrandID": 1,
+            "UnitType": "liter",
+            "PricePerUnit": 280,
+            "Quantities": [
+                2,
+                5
+            ],
+            "rating": "4.1",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/m/40317379_1-gooddiet-organic-virgin-coconut-oil.jpg?tr=w-3840,q=80"
         },
         {
-            "id": "11",
-            "name": "Coconut Oil",
-            "category": "Cooking Oils",
-            "price": 6.49,
-            "quantity": 45,
-            "brand": "Parachute",
-            "image": "coconut_oil.jpg",
-            "rating": 4.9
+            "ProductID": 11,
+            "Name": "Peanut Oil",
+            "Description": "All-natural peanut oil",
+            "CategoryID": 2,
+            "BrandID": 2,
+            "UnitType": "liter",
+            "PricePerUnit": 200,
+            "Quantities": [
+                1.5,
+                4.5
+            ],
+            "rating": "3.3",
+            "ImageURL": "https://www.bigbasket.com/media/uploads/p/l/40220040_1-praakritik-organic-peanut-oil-cold-pressed.jpg"
+        }
+    ],
+    "Categories": [
+        {
+            "CategoryID": 1,
+            "Name": "Flour",
+            "Brands": [
+                {
+                    "BrandID": 1,
+                    "Name": "Aashirvaad"
+                },
+                {
+                    "BrandID": 2,
+                    "Name": "Pillsbury"
+                },
+                {
+                    "BrandID": 3,
+                    "Name": "24 Mantra Organic"
+                }
+            ]
         },
         {
-            "id": "12",
-            "name": "Paneer",
-            "category": "Dairy",
-            "price": 8.99,
-            "quantity": 15,
-            "brand": "Nanak",
-            "image": "paneer.jpg",
-            "rating": 4.3
-        },
-        {
-            "id": "13",
-            "name": "Red Lentils (Masoor Dal)",
-            "category": "Legumes",
-            "price": 3.79,
-            "quantity": 55,
-            "brand": "24 Mantra Organic",
-            "image": "red_lent.jpeg",
-            "rating": 4.7
-        },
-        {
-            "id": "14",
-            "name": "Indian Tea (Chai)",
-            "category": "Beverages",
-            "price": 5.99,
-            "quantity": 30,
-            "brand": "Taj Mahal",
-            "image": "tea.jpg",
-            "rating": 4.4
-        },
-        {
-            "id": "15",
-            "name": "Ground Coriander (Dhania Powder)",
-            "category": "Spices",
-            "price": 2.49,
-            "quantity": 65,
-            "brand": "Shan",
-            "image": "d_powder.jpeg",
-            "rating": 4.5
+            "CategoryID": 2,
+            "Name": "Cooking Oil",
+            "Brands": [
+                {
+                    "BrandID": 1,
+                    "Name": "Fortune"
+                },
+                {
+                    "BrandID": 2,
+                    "Name": "Borges"
+                }
+            ]
         }
     ]
 }

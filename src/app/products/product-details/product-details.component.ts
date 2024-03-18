@@ -1,48 +1,80 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { ProductService } from '../../shared/services/product.service';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss'
+
 })
-
 export class ProductDetailsComponent implements OnInit {
-  productId!: number;
-  product: any;
+  product: any = {};
+  selectedQuantities: { [key: string]: number } = {};
+  productCount: { [key: string]: number } = {};
 
-  constructor(private route: ActivatedRoute, private productService: ProductService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const id = params.get('id');
-      if (id !== null) {
-        this.productId = +id;
-        this.getProductDetails();
-      } else {
-      }
-    });
+    const storedProduct = localStorage.getItem('currentProduct');
+    if (storedProduct) {
+      this.product = JSON.parse(storedProduct);
+    } else {
+      this.product = history.state && history.state.product ? history.state.product : {};
+    }
+    this.selectedQuantities[this.product.id] = this.product.selectedQuantity;
+    this.productCount[this.product.id] = this.product.productCount ? this.product.productCount[this.product.id] : 0;
   }
 
-  getProductDetails(): void {
-    if (this.productId !== null) {
-      this.productService.getProductById(this.productId).subscribe({
-        next: (data) => {
-          this.product = data;
-        },
-        error: (error) => {
-          console.error('Error fetching product details:', error);
-        },
-        complete: () => {
-          console.info('Product details fetched successfully');
-        }
-      });
+  ngOnDestroy(): void {
+    this.clearLocalStorage();
+  }
+
+  onSelectionChange(event: any, product: any) {
+    product.selectedQuantity = event.value;
+    product.price = product.pricePerUnit * product.selectedQuantity;
+    this.updateLocalStorage();
+  }
+
+  addToCart(product: any): void {
+    if (this.productCount[product.id] === undefined) {
+      this.productCount[product.id] = 1;
     } else {
-      console.error('Product ID is null');
+      this.productCount[product.id]++;
     }
+    product.productCount[product.id] = this.productCount[product.id];
+    this.updateLocalStorage();
+  }
+
+  decrementCount(product: any): void {
+    if (this.productCount[product.id] !== undefined && this.productCount[product.id] > 0) {
+      this.productCount[product.id]--;
+      product.productCount[product.id] = this.productCount[product.id];
+      this.updateLocalStorage();
+    }
+  }
+
+  incrementCount(product: any): void {
+    if (this.productCount[product.id] === undefined) {
+      this.productCount[product.id] = 1;
+    } else {
+      this.productCount[product.id]++;
+    }
+    product.productCount[product.id] = this.productCount[product.id];
+    this.updateLocalStorage();
+  }
+
+  updateLocalStorage(): void {
+    localStorage.setItem('currentProduct', JSON.stringify(this.product));
+  }
+
+  clearLocalStorage(): void {
+    localStorage.removeItem('currentProduct');
   }
 }

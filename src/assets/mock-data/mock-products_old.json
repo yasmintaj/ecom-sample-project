@@ -1,0 +1,154 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Basmati Rice",
+            "category": "Grains",
+            "price": 10.99,
+            "quantity": 100,
+            "brand": "Tilda",
+            "image": "rice.jpeg",
+            "rating": 4.5
+        },
+        {
+            "id": "2",
+            "name": "Chickpeas (Chana)",
+            "category": "Legumes",
+            "price": 2.99,
+            "quantity": 50,
+            "brand": "Rajma",
+            "image": "chickpeas.jpeg",
+            "rating": 4.0
+        },
+        {
+            "id": "3",
+            "name": "Turmeric Powder",
+            "category": "Spices",
+            "price": 3.49,
+            "quantity": 75,
+            "brand": "MDH",
+            "image": "turmeric.jpeg",
+            "rating": 4.2
+        },
+        {
+            "id": "4",
+            "name": "Ghee",
+            "category": "Dairy",
+            "price": 7.99,
+            "quantity": 30,
+            "brand": "Amul",
+            "image": "ghee.jpg",
+            "rating": 4.8
+        },
+        {
+            "id": "5",
+            "name": "Masoor Dal",
+            "category": "Legumes",
+            "price": 4.25,
+            "quantity": 40,
+            "brand": "Laxmi",
+            "image": "black_lent.jpg",
+            "rating": 4.3
+        },
+        {
+            "id": "6",
+            "name": "Cumin Seeds (Jeera)",
+            "category": "Spices",
+            "price": 2.79,
+            "quantity": 60,
+            "brand": "Eastern",
+            "image": "cumin.jpg",
+            "rating": 4.1
+        },
+        {
+            "id": "7",
+            "name": "Green Tea",
+            "category": "Beverages",
+            "price": 4.99,
+            "quantity": 20,
+            "brand": "Taj Mahal",
+            "image": "green_tea.jpg",
+            "rating": 4.7
+        },
+        {
+            "id": "8",
+            "name": "Alphonso Mango Pulp",
+            "category": "Canned Foods",
+            "price": 3.99,
+            "quantity": 25,
+            "brand": "Kesar",
+            "image": "mango.jpeg",
+            "rating": 4.4
+        },
+        {
+            "id": "9",
+            "name": "Whole Wheat Flour (Atta)",
+            "category": "Flours",
+            "price": 4.49,
+            "quantity": 35,
+            "brand": "Ashirwad",
+            "image": "wheat.jpg",
+            "rating": 4.6
+        },
+        {
+            "id": "10",
+            "name": "Papadums",
+            "category": "Snacks",
+            "price": 1.99,
+            "quantity": 70,
+            "brand": "Lijjat",
+            "image": "papadums.jpg",
+            "rating": 4.2
+        },
+        {
+            "id": "11",
+            "name": "Coconut Oil",
+            "category": "Cooking Oils",
+            "price": 6.49,
+            "quantity": 45,
+            "brand": "Parachute",
+            "image": "coconut_oil.jpg",
+            "rating": 4.9
+        },
+        {
+            "id": "12",
+            "name": "Paneer",
+            "category": "Dairy",
+            "price": 8.99,
+            "quantity": 15,
+            "brand": "Nanak",
+            "image": "paneer.jpg",
+            "rating": 4.3
+        },
+        {
+            "id": "13",
+            "name": "Red Lentils (Masoor Dal)",
+            "category": "Legumes",
+            "price": 3.79,
+            "quantity": 55,
+            "brand": "24 Mantra Organic",
+            "image": "red_lent.jpeg",
+            "rating": 4.7
+        },
+        {
+            "id": "14",
+            "name": "Indian Tea (Chai)",
+            "category": "Beverages",
+            "price": 5.99,
+            "quantity": 30,
+            "brand": "Taj Mahal",
+            "image": "tea.jpg",
+            "rating": 4.4
+        },
+        {
+            "id": "15",
+            "name": "Ground Coriander (Dhania Powder)",
+            "category": "Spices",
+            "price": 2.49,
+            "quantity": 65,
+            "brand": "Shan",
+            "image": "d_powder.jpeg",
+            "rating": 4.5
+        }
+    ]
+}
